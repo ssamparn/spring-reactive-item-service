@@ -111,7 +111,7 @@ public class ReactiveControllerTest {
                 .expectStatus().isOk()
                 .expectBody(Integer.class)
                 .consumeWith((response) -> {
-                    Assertions.assertEquals(response.getResponseBody(), new Integer(1));
+                    Assertions.assertEquals(response.getResponseBody(), Integer.valueOf(1));
                 });
     }
 }
